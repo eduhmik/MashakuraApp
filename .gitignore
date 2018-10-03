@@ -1,3 +1,4 @@
-meals/
-.vscode/
+/meals
+/.vscode
 config.py
+*.pyc

@@ -1,43 +1,38 @@
 {% extends "base.html" %}
-
 {% block title %}
 Sign_up
-{% endblock  %}
-
+{% endblock %}
 {% block page_content%}
 <style>
-        input[type="text"] {
+    input[type="text"] {
             border-radius: 5px;
             border: none;
             width: 300px;
             height: 20px;
             padding: 5px;
         }
-    </style>
-<body>
-    <form class="myBackground">
-        <br>
-            <br>
-                <br>
-                First name:<br>
-                <input type="text" name="firstname" placeholder="firstname"><br>
-                Last name:<br>
-                <input type="text" name="lastname" placeholder="lastname"></br>
-                Email:<br>
-                <input type="text" name="email" placeholder="email"><br>
-                Password:<br>
-                <input type="text" name="password" placeholder="password"></br>
-                Confirm password:<br>
-                <input type="text" name="confirm_password" placeholder="confirm_password"></br>
-            
-                <br>
-                <a href="submit" class="button">Sign Up</a></br>
-                    <p> Already have an account?</p>
-    
-                    <a href="signin" name="sign_in">Sign in</a>
-            </br>
-        </br>
+</style>
+<form class="myBackground" action="{{ url_for('signup') }}" method="post">
+    <br>
+    <br>
+    <br>
+    First name:<br>
+    <input type="text" name="firstname" placeholder="firstname"><br>
+    Last name:<br>
+    <input type="text" name="lastname" placeholder="lastname"></br>
+    Email:<br>
+    <input type="text" name="email" placeholder="email"><br>
+    Password:<br>
+    <input type="text" name="password" placeholder="password"></br>
+    Confirm password:<br>
+    <input type="text" name="confirm_password" placeholder="confirm_password"></br>
+    <br>
+    <button type="submit" class="button">Sign Up</button>
+    <p> Already have an account?</p>
+    <a href="signin" name="sign_in">Sign in</a>
     </br>
-    </form> 
-</body>
+    </br>
+    </br>
+</form>
+
 {% endblock page_content %}
